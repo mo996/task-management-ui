@@ -1,0 +1,48 @@
+// Dark Theme Variables
+// Defining base colors as SASS variables for easy reuse and theming.
+$primary-color: #1E3A5F; /* Midnight Blue - Used for the main elements of the UI such as headers, primary buttons, and active states */
+$secondary-color: #37474F; /* Dark Slate - Used for secondary elements like secondary buttons, background of cards, or less prominent UI elements */
+$accent-color: #FF9800; /* Neon Orange - Used for accents that need to stand out, such as notifications, badges, or highlights */
+$background-color: #121212; /* Charcoal Black - Used as the main background color for your application in dark mode */
+$text-color: #ECEFF1; /* Light Gray - Used for primary text color to ensure readability against the dark background */
+
+$border-color: #455A64; /* Dark Gray - Used for borders around components like input fields, cards, or containers */
+$hover-background-color: #263238; /* Darker Slate - Used for hover states of interactive elements like buttons or links */
+$disabled-color: #616161; /* Dim Gray - Used for disabled elements to indicate they are inactive, such as disabled buttons or input fields */
+$shadow-color: rgba(0, 0, 0, 0.5); /* Deep Shadow - Used to add depth to elements like cards, modals, or dropdowns by applying shadows */
+$link-color: #64B5F6; /* Sky Blue - Used for text links to make them stand out as clickable elements */
+
+$error-color: #EF5350; /* Bright Red - Used for error messages, critical alerts, or indicating invalid input fields */
+$success-color: #66BB6A; /* Lime Green - Used to indicate success states, such as after a successful form submission */
+$info-color: #42A5F5; /* Sky Blue - Used for informational messages or neutral alerts that require the user's attention */
+$warning-color: #FFCA28; /* Amber Yellow - Used for warning messages or alerts that need to caution the user */
+
+
+
+
+// should align with color mode classSuffix in the nuxt.config.ts
+.dark {
+  // Using CSS variables to define theme colors
+  // These are set under the .dark class so that they can be easily toggled for dark mode
+  --v-primary-base: #{$primary-color};
+  --v-secondary-base: #{$secondary-color};
+  --v-accent-base: #{$accent-color};
+  --v-background-base: #{$background-color};
+  --v-text-base: #{$text-color};
+
+  --v-border-color: #{$border-color};
+  --v-hover-background-color: #{$hover-background-color};
+  --v-disabled-color: #{$disabled-color};
+  --v-shadow-color: #{$shadow-color};
+  --v-link-color: #{$link-color};
+
+  --v-error-base: #{$error-color};
+  --v-success-base: #{$success-color};
+  --v-info-base: #{$info-color};
+  --v-warning-base: #{$warning-color};
+}
+
+// This approach combines SASS variables with CSS variables:
+// - SASS allows for easy theme management by defining colors centrally.
+// - CSS variables enable dynamic changes and are applied within the scope of .dark, 
+//   making it simple to switch themes by toggling this class.

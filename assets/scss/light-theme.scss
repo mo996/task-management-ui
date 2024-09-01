@@ -1,0 +1,48 @@
+// Light Theme Variables
+$primary-color: #4A90E2; /* Soft Blue - Used for the main elements of the UI such as headers, primary buttons, and active states */
+$secondary-color: #ECEFF1; /* Cool Gray - Used for secondary elements like secondary buttons, background of cards, or less prominent UI elements */
+$accent-color: #FF6F61; /* Bright Coral - Used for accents that need to stand out, such as notifications, badges, or highlights */
+$background-color: #F7F9FC; /* White Smoke - Used as the main background color for your application */
+$text-color: #333333; /* Charcoal Gray - Used for primary text color to ensure readability against the background */
+
+$border-color: #D1D9E0; /* Light Gray - Used for borders around components like input fields, cards, or containers */
+$hover-background-color: #E3F2FD; /* Light Blue - Used for hover states of interactive elements like buttons or links */
+$disabled-color: #CFD8DC; /* Pale Gray - Used for disabled elements to indicate they are inactive, such as disabled buttons or input fields */
+$shadow-color: rgba(176, 190, 197, 0.5); /* Subtle Shadow - Used to add depth to elements like cards, modals, or dropdowns by applying shadows */
+$link-color: #1A73E8; /* Royal Blue - Used for text links to make them stand out as clickable elements */
+
+$error-color: #D32F2F; /* Crimson Red - Used for error messages, critical alerts, or indicating invalid input fields */
+$success-color: #388E3C; /* Forest Green - Used to indicate success states, such as after a successful form submission */
+$info-color: #1976D2; /* Azure Blue - Used for informational messages or neutral alerts that require the user's attention */
+$warning-color: #FBC02D; /* Golden Yellow - Used for warning messages or alerts that need to caution the user */
+
+
+
+
+
+
+// should align with color mode classSuffix in the nuxt.config.ts
+.light {
+  // Using CSS variables to define theme colors
+  --v-primary-base: #{$primary-color};
+  --v-secondary-base: #{$secondary-color};
+  --v-accent-base: #{$accent-color};
+  --v-background-base: #{$background-color};
+  --v-text-base: #{$text-color};
+
+  --v-border-color: #{$border-color};
+  --v-hover-background-color: #{$hover-background-color};
+  --v-disabled-color: #{$disabled-color};
+  --v-shadow-color: #{$shadow-color};
+  --v-link-color: #{$link-color};
+
+  --v-error-base: #{$error-color};
+  --v-success-base: #{$success-color};
+  --v-info-base: #{$info-color};
+  --v-warning-base: #{$warning-color};
+}
+
+// This approach combines SASS variables with CSS variables:
+// - SASS allows for easy theme management by defining colors centrally.
+// - CSS variables enable dynamic changes and are applied within the scope of .light,
+//   making it simple to switch themes by toggling this class.
